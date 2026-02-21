@@ -250,18 +250,12 @@ Step 5: Connect LDR to analog pin
 Step 6: Connect LED with 220Ω resistor
 Step 7: Upload code using Arduino IDE
 
-
-![Step 1](images/assembly-step1.jpg)
-
-![Step 2](images/assembly-step2.jpg)
-
-![Step 3](images/assembly-step3.jpg)
+https://drive.google.com/drive/folders/1z6WhXm0iGgM5_GzKCj_RPsAAhTzgDJe1)
 
 **Final Assembly:**
 step 8: System ready for testing
 
-![Final Build](images/final-build.jpg)
-
+![Final Build] https://drive.google.com/drive/folders/1z6WhXm0iGgM5_GzKCj_RPsAAhTzgDJe1
  Completed project ready for testing
 
 ---
@@ -374,11 +368,6 @@ The demo shows:
 • Serial monitor output
 
  
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
-
----
-
 ## AI Tools Used 
 
 Tool Used: ChatGPT
