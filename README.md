@@ -145,27 +145,15 @@ Sensors (PIR, LDR, DHT11) → ESP32 Processing → Decision Logic → LED Contro
 
 ### For Software:
 
-#### Screenshots (Add at least 3)
-
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+#### Screenshots (https://drive.google.com/drive/folders/1z6WhXm0iGgM5_GzKCj_RPsAAhTzgDJe1)
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
-
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
+https://drive.google.com/drive/folders/1z6WhXm0iGgM5_GzKCj_RPsAAhTzgDJe1
 
 System continuously reads sensors
 Checks motion detection
@@ -178,110 +166,60 @@ Displays values in Serial Monitor
 
 #### Schematic & Circuit
 
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+## 🔌 Schematic & Circuit
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+### 🔹 Circuit Diagram
+### 🔹 Schematic Diagram
+
+![Circuit Diagram](https://drive.google.com/drive/folders/1z6WhXm0iGgM5_GzKCj_RPsAAhTzgDJe1)
+
+**Figure 1: Complete Circuit Connections**
+
+This diagram shows the hardware wiring of the Smart Energy Saving System:
+
+- **PIR Sensor**
+  - VCC → 3.3V  
+  - GND → GND  
+  - OUT → GPIO 27  
+
+- **DHT11 Temperature Sensor**
+  - VCC → 3.3V  
+  - GND → GND  
+  - DATA → GPIO 33  
+
+- **LDR (Light Dependent Resistor)**
+  - One end → 3.3V  
+  - Other end → GPIO 34 (Analog Input)  
+  - 10kΩ resistor connected to GND (Voltage Divider Configuration)
+
+- **LED**
+  - Anode → GPIO 25 (through 220Ω resistor)  
+  - Cathode → GND  
+
+The ESP32 processes motion and light data to control the LED automatically.
+
+![Schematic Diagram](images/schematic-diagram.png)
+
+**Figure 2: System Schematic Overview**
+
+The schematic illustrates the logical connection between:
+
+Sensors → ESP32 Microcontroller → Output (LED / Relay)
+
+Working Logic:
+
+1. PIR detects motion  
+2. LDR checks ambient light level  
+3. If motion is detected AND light level is low → LED turns ON  
+4. If no motion OR sufficient daylight → LED turns OFF  
+5. DHT11 continuously monitors temperature for environmental tracking  
+
+This standalone system operates completely offline without cloud or internet dependency.
 
 #### Build Photos
 
-![Team](Add photo of your team here)
+https://drive.google.com/drive/folders/1z6WhXm0iGgM5_GzKCj_RPsAAhTzgDJe1
 
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
----
-
-## Additional Documentation
-
-### For Web Projects with Backend:
-
-#### API Documentation
-
-**Base URL:** `https://api.yourproject.com`
-
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
-
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
-
-[Add more endpoints as needed...]
-
----
-
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
----
 
 ### For Hardware Projects:
 Complete connection of ESP32 with PIR, LDR, DHT11, and LED
