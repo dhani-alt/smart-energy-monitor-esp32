@@ -2,7 +2,7 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# Smart Energy Saving System using ESP32 🎯
+# Smart Energy Saving System using ESP32
 
 ## Basic Details
 
@@ -97,23 +97,49 @@ Circuit Setup
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+1. Install Arduino IDE
+2. Install ESP32 board package:
+   - File → Preferences → Add ESP32 Board Manager URL  
+3. Install required library:
+   - `DHT sensor library
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+1. Connect ESP32 via USB
+2. Select Board: ESP32 Dev Module
+3. Select correct COM Port
+4. Click Upload
 ```
 
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+
+• ESP32 Dev Board
+• PIR Sensor
+• DHT11
+• LDR
+• LED
+• 220Ω Resistor
+• Breadboard
+• Jumper wires
+Circuit Setup
+• PIR OUT → GPIO 27
+• DHT11 DATA → GPIO 33
+• LDR → GPIO 34 (Analog input)
+• LED → GPIO 25
+• All VCC → 3.3V
+• All GND → GND
 
 #### Circuit Setup
-[Explain how to set up the circuit]
+System Architecture
 
----
+Sensors (PIR, LDR, DHT11) → ESP32 Processing → Decision Logic → LED Control
+• If Motion + Low Light → LED ON
+• If No Motion → LED OFF
+• If Bright Light → LED OFF
+
 
 ## Project Documentation
 
@@ -140,9 +166,13 @@ Circuit Setup
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
 
----
+System continuously reads sensors
+Checks motion detection
+Checks ambient light level
+Applies control logic
+Turns LED ON/OFF accordingly
+Displays values in Serial Monitor
 
 ### For Hardware:
 
@@ -254,49 +284,47 @@ xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
 ---
 
 ### For Hardware Projects:
+Complete connection of ESP32 with PIR, LDR, DHT11, and LED
 
 #### Bill of Materials (BOM)
 
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
+Component | Quantity | Specifications | Approx Price
+ESP32 | 1 | Dev Module | ₹450
+PIR Sensor | 1 | HC-SR501 | ₹120
+DHT11 | 1 | Temp sensor | ₹80
+LDR | 1 | Light sensor | ₹20
+LED | 1 | 5mm | ₹5
+Resistor | 1 | 220Ω | ₹1
+Breadboard | 1 | 830 points | ₹120
+Jumper wires | 10 | M-M | ₹50
 
-**Total Estimated Cost:** ₹[Amount]
+**Total Estimated Cost:** ₹846
 
 #### Assembly Instructions
 
 **Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
+
+Step 1: Connect ESP32 to breadboard
+Step 2: Connect power rails (3.3V & GND)
+Step 3: Connect PIR sensor
+Step 4: Connect DHT11
+Step 5: Connect LDR to analog pin
+Step 6: Connect LED with 220Ω resistor
+Step 7: Upload code using Arduino IDE
+
+
 ![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
 
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
 ![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
 
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
 ![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
 
 **Final Assembly:**
+step 8: System ready for testing
+
 ![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
+
+ Completed project ready for testing
 
 ---
 
@@ -401,48 +429,53 @@ python script.py -v --format json data.json
 ### Video
 [Add your demo video link here - YouTube, Google Drive, etc.]
 
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+The demo shows: 
+• Motion detection
+• Automatic light control
+• Daylight detection
+• Serial monitor output
 
+ 
 ### Additional Demos
 [Add any extra demo materials/links - Live site, APK download, online demo, etc.]
 
 ---
 
-## AI Tools Used (Optional - For Transparency Bonus)
+## AI Tools Used 
 
-If you used AI tools during development, document them here for transparency:
+Tool Used: ChatGPT
+Purpose:
+     • Code debugging
+     • Circuit explanation preparation
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
-
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
 
 **Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
+
 - "Debug this async function that's causing race conditions"
 - "Optimize this database query for better performance"
 
-**Percentage of AI-generated code:** [Approximately X%]
+**Percentage of AI-generated code:** 30%
+
+
 
 **Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
 
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
+• Circuit design
+• Hardware setup
+• Testing and validation
+• Logic development
 
----
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+ Dhaniya O V :
+- Project concept and system design  
+- Hardware component selection and circuit design  
+- ESP32 firmware development (Arduino C++)  
+- Sensor integration (PIR, LDR, DHT11)  
+- Testing and debugging  
+- Documentation and GitHub repository management  
 
----
 
 ## License
 
