@@ -2,59 +2,97 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# Smart Energy Saving System using ESP32 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: EcoVolt
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: DHANIYA OV - GOVERNMENT ENGINEERING COLLEGE IDUKKI
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+Smart Energy Saving System is a hardware-based intelligent energy management system that automatically controls room lighting based on motion, ambient light intensity, and environmental conditions.
+The system reduces unnecessary power consumption without requiring internet connectivity.
 
 ### The Problem statement
-[What problem are you solving?]
-
+In classrooms, laboratories, hostels, and homes:
+• Lights are often left ON when no one is present
+• Energy is wasted during daytime even when sunlight is available
+• Manual switching causes human error
+This leads to increased electricity bills and energy wastage.
 ### The Solution
-[How are you solving it?]
+We designed a standalone ESP32-based smart system that:
 
----
+• Detects human presence using PIR sensor
+• Detects ambient light using LDR
+• Measures temperature using DHT11
+• Automatically turns lights ON/OFF
+• Works completely offline
+• Requires no internet or cloud
 
 ## Technical Details
-
 ### Technologies/Components Used
-
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
 
+Languages used:
+• C++ (Arduino IDE)
+Libraries used:
+• DHT.h
+Tools used:
+• Arduino IDE
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
 
----
+Main Components:
+• ESP32 Dev Module
+• PIR Sensor (HC-SR501)
+• DHT11 Sensor
+• LDR
+• LED / Relay Module
+• Breadboard
+• Jumper Wires
+
+Specifications:
+• ESP32 – 240 MHz dual-core processor
+• PIR – Motion detection range up to 7m
+• DHT11 – Temperature range 0–50°C
+• LDR – Analog light sensing
+Tools Required:
+• USB cable
+• Breadboard
+• Soldering kit (optional for permanent setup)
 
 ## Features
 
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
-
----
+Feature 1: Automatic Light ON when motion detected
+Feature 2: Light OFF when no motion
+Feature 3: Daylight detection (No light during daytime)
+Feature 4: Temperature monitoring
+Feature 5: Low-cost and portable
+Feature 6: Fully offline operation
 
 ## Implementation
 
+Hardware Components Required
+• ESP32 Dev Board
+• PIR Sensor
+• DHT11
+• LDR
+• LED
+• 220Ω Resistor
+• Breadboard
+• Jumper wires
+
+Circuit Setup
+• PIR OUT → GPIO 27
+• DHT11 DATA → GPIO 33
+• LDR → GPIO 34 (Analog input)
+• LED → GPIO 25
+• All VCC → 3.3V
+• All GND → GND
 ### For Software:
 
 #### Installation
